@@ -1,6 +1,6 @@
 .jumbotron {
   padding-top: 6rem;
-  background-color: #e2edff;
+  background-color: #476c78;
   height: 100vh;
   position: relative;
 }
@@ -11,10 +11,15 @@
   left: 0;
 }
 
-#projects {
-  background-color: #e2edff;
+#about {
+  background-color: #476c78;
 }
-
+#projects {
+  background-color: #476c78;
+}
+#contact {
+  background-color: #476c78;
+}
 section {
   padding-top: 5rem;
 }
