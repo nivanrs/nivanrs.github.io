@@ -4,199 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nivan Ramadhan Sugiantoro - Data Analyst Portfolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --background-color: #ecf0f1;
-            --text-color: #34495e;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        
         header {
-            background-color: var(--primary-color);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style-type: none;
-        }
-        
-        nav ul li {
-            margin: 0 1rem;
-        }
-        
-        nav ul li a {
+            background-color: #3498db;
             color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: var(--accent-color);
-        }
-        
-        main {
-            max-width: 1200px;
-            margin: 80px auto 0;
-            padding: 2rem;
-        }
-        
-        section {
-            margin-bottom: 4rem;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        h1, h2, h3 {
-            color: var(--secondary-color);
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-        }
-        
-        #home {
             text-align: center;
-            padding: 4rem 0;
+            padding: 1rem;
+            margin-bottom: 2rem;
         }
-        
-        #home p {
-            font-size: 1.2rem;
-            color: var(--accent-color);
+        h1, h2 {
+            color: #2c3e50;
         }
-        
-        .skills-container {
+        .section {
+            margin-bottom: 2rem;
+        }
+        .project {
+            background-color: #f0f8ff;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 10px;
         }
-        
         .skill {
-            background-color: var(--primary-color);
+            background-color: #3498db;
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
             font-size: 0.9rem;
         }
-        
-        .project {
-            background-color: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .project h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        canvas {
-            max-width: 100%;
-            height: auto;
-            margin-top: 1rem;
-        }
-        
-        #contact {
+        .contact {
             text-align: center;
         }
-        
-        #contact a {
-            color: var(--primary-color);
+        .contact a {
+            color: #3498db;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
-        
-        #contact a:hover {
-            color: var(--accent-color);
-        }
-        
-        footer {
-            background-color: var(--secondary-color);
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-        
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav ul li {
-                margin: 0.5rem 0;
-            }
+        .contact a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Nivan Ramadhan Sugiantoro</h1>
+        <p>Data Analyst | Insights Explorer | Problem Solver</p>
     </header>
 
     <main>
-        <section id="home">
-            <h1>Nivan Ramadhan Sugiantoro</h1>
-            <p>Data Analyst | Insights Explorer | Problem Solver</p>
-        </section>
-
-        <section id="about">
+        <section class="section">
             <h2>About Me</h2>
-            <p>Hello! I'm Nivan, a passionate Data Analyst with a keen eye for turning complex datasets into actionable insights. With a background in [Your Field of Study], I specialize in statistical analysis, data visualization, and machine learning techniques. I'm dedicated to using data to drive informed decision-making and solve real-world problems.</p>
+            <p>
+                Hello! I'm Nivan, a passionate Data Analyst with a keen eye for turning complex datasets into actionable insights. With a background in [Your Field of Study], I specialize in [Your Key Areas of Expertise]. I'm dedicated to using data to drive informed decision-making and solve real-world problems.
+            </p>
         </section>
 
-        <section id="skills">
+        <section class="section">
             <h2>Skills</h2>
-            <div class="skills-container">
-                <span class="skill">Python (Pandas, NumPy, Scikit-learn)</span>
-                <span class="skill">R (ggplot2, dplyr)</span>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">R</span>
                 <span class="skill">SQL</span>
                 <span class="skill">Tableau</span>
                 <span class="skill">Power BI</span>
@@ -206,22 +84,29 @@
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
+        <section class="section">
+            <h2>Featured Projects</h2>
             <div class="project">
-                <h3>Customer Segmentation Analysis</h3>
-                <p>Used K-means clustering to segment customers based on their purchasing behavior, resulting in targeted marketing strategies that increased conversion rates by 15%.</p>
-                <canvas id="chart1"></canvas>
+                <h3>Project 1: [Project Name]</h3>
+                <p>Brief description of the project, including the problem solved, techniques used, and key outcomes.</p>
+                <a href="#">View Project</a>
             </div>
             <div class="project">
-                <h3>Sales Forecast Model</h3>
-                <p>Developed a time series forecasting model using ARIMA to predict monthly sales, achieving 92% accuracy and helping optimize inventory management.</p>
-                <canvas id="chart2"></canvas>
+                <h3>Project 2: [Project Name]</h3>
+                <p>Brief description of the project, including the problem solved, techniques used, and key outcomes.</p>
+                <a href="#">View Project</a>
             </div>
+            <!-- Add more projects as needed -->
         </section>
 
-        <section id="contact">
+        <section class="section contact">
             <h2>Get in Touch</h2>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-            <p>GitHub: <a href="https://github.com/nivanrs" target="_blank">github.com/nivanrs
+            <p>
+                <a href="mailto:your.email@example.com">Email</a> |
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
