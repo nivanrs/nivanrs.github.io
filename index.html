@@ -4,8 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nivan Ramadhan Sugiantoro - Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h1, h2, h3 {
+            color: var(--secondary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        #home {
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        #home p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .skill {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .project {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        canvas {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1rem;
+        }
+        
+        #contact {
+            text-align: center;
+        }
+        
+        #contact a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        #contact a:hover {
+            color: var(--accent-color);
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,21 +189,21 @@
 
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I'm Nivan, a passionate Data Analyst with a keen eye for turning complex datasets into actionable insights. With a background in MBA in decision making and strategic negotioation, I specialize in statistical analysis, data visualization, and machine learning techniques. I'm dedicated to using data to drive informed decision-making and solve real-world problems.</p>
+            <p>Hello! I'm Nivan, a passionate Data Analyst with a keen eye for turning complex datasets into actionable insights. With a background in [Your Field of Study], I specialize in statistical analysis, data visualization, and machine learning techniques. I'm dedicated to using data to drive informed decision-making and solve real-world problems.</p>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>Python (Pandas, NumPy, Scikit-learn)</li>
-                <li>R (ggplot2, dplyr)</li>
-                <li>SQL</li>
-                <li>Tableau</li>
-                <li>Power BI</li>
-                <li>Machine Learning</li>
-                <li>Statistical Analysis</li>
-                <li>Data Visualization</li>
-            </ul>
+            <div class="skills-container">
+                <span class="skill">Python (Pandas, NumPy, Scikit-learn)</span>
+                <span class="skill">R (ggplot2, dplyr)</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Tableau</span>
+                <span class="skill">Power BI</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">Statistical Analysis</span>
+                <span class="skill">Data Visualization</span>
+            </div>
         </section>
 
         <section id="projects">
@@ -57,62 +218,10 @@
                 <p>Developed a time series forecasting model using ARIMA to predict monthly sales, achieving 92% accuracy and helping optimize inventory management.</p>
                 <canvas id="chart2"></canvas>
             </div>
-            <!-- Add more projects as needed -->
         </section>
 
         <section id="contact">
             <h2>Get in Touch</h2>
-            <p>Email: <a href="mailto:nivanrs@gmail.com.com">nivanrs@gmail.com.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/nivanrs" target="_blank">linkedin.com/in/nivanrs</a></p>
-            <p>GitHub: <a href="https://github.com/nivanrs" target="_blank">github.com/nivanrs</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Nivan Ramadhan Sugiantoro. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Sample data for charts
-        const ctx1 = document.getElementById('chart1').getContext('2d');
-        new Chart(ctx1, {
-            type: 'scatter',
-            data: {
-                datasets: [{
-                    label: 'Customer Segments',
-                    data: [
-                        {x: 1, y: 1},
-                        {x: 2, y: 3},
-                        {x: 3, y: 2},
-                        {x: 4, y: 4},
-                        {x: 5, y: 3}
-                    ],
-                    backgroundColor: 'rgb(75, 192, 192)'
-                }]
-            },
-            options: {
-                scales: {
-                    x: {
-                        type: 'linear',
-                        position: 'bottom'
-                    }
-                }
-            }
-        });
-
-        const ctx2 = document.getElementById('chart2').getContext('2d');
-        new Chart(ctx2, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-                datasets: [{
-                    label: 'Sales Forecast',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderColor: 'rgb(75, 192, 192)',
-                    tension: 0.1
-                }]
-            }
-        });
-    </script>
-</body>
-</html>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+            <p>GitHub: <a href="https://github.com/nivanrs" target="_blank">github.com/nivanrs
